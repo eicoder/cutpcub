@@ -10,3 +10,6 @@
 以包的形式包装rm -rf命令，用来删除文件和文件夹的，不管文件夹是否为空，都可删除.
 ### [chalk](https://github.com/chalk/chalk)
 终端字符串样式设置
+### [glob](https://github.com/isaacs/node-glob)
+使用shell使用的模式匹配文件
+### [html-webpack-plugin](https://github.com/jantimon/html-webpack-plugin)

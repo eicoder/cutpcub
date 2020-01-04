@@ -1,13 +1,21 @@
 const path = require('path');
 
 module.exports = {
+  assetsRoot: path.resolve(__dirname, '../dist'),
   dev: {
     port: 8080,
-    notifyOnErrors: true
+    notifyOnErrors: true,
+    assetsSubDirectory: 'static',
+    assetsPublicPath: '/',
+    env: {
+      NODE_ENV: '"development"'
+    }
   },
   build: {
-    assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
-    assetsPublicPath: '/'
+    assetsPublicPath: '/',
+    env: {
+      NODE_ENV: '"production"'
+    }
   }
 };

@@ -8,13 +8,13 @@ const chalk = require('chalk');
 const webpack = require('webpack');
 
 const path = require('path');
-const config = require('../config');
+const config = require('./config');
 const webpackConfig = require('./webpack.prod.conf');
 
 const spinner = ora('building for production...');
 spinner.start();
 
-rm(path.join(config.build.assetsRoot), err => {
+rm(path.join(config.assetsRoot), err => {
   if (err) throw err;
   webpack(webpackConfig, (err, stats) => {
     spinner.stop();

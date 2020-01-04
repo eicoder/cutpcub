@@ -7,7 +7,13 @@ const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin');
 const config = require('./config');
 const utils = require('./utils');
 
-const devWebpackConfig = merge(baseWebpackConfig, {});
+const devWebpackConfig = merge(baseWebpackConfig, {
+  plugins: [
+    new webpack.DefinePlugin({
+      'process.env': config.dev.env
+    }),
+  ]
+});
 
 module.exports = new Promise(((resolve, reject) => {
   portfinder.basePort = process.env.PORT || config.dev.port;

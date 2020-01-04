@@ -1,4 +1,4 @@
-const packageConfig = require('../package.json');
+const packageConfig = require('../../package.json');
 
 /**
  * webpack-dev-server 错误提示
