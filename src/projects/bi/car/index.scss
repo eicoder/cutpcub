@@ -1,0 +1,11 @@
+.car {
+  color: $color-red;
+  width: 100px;
+  height: 50px;
+  border: 1px solid black;
+  &__window {
+    border: 1px solid black;
+    width: 30px;
+    height: 20px;
+  }
+}

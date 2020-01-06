@@ -6,6 +6,7 @@ const baseWebpackConfig = require('./webpack.base.conf');
 const config = require('./config');
 
 const webpackConfig = merge(baseWebpackConfig, {
+  mode: 'production',
   plugins: [
     new webpack.DefinePlugin({
       'process.env': config.build.env

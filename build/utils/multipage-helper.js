@@ -1,10 +1,11 @@
 'use strict';
 const glob = require('glob');
-const chalk = require('chalk');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const config = require('../config');
 const utils = require('./index');
+const fs = require("fs");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const projectPath = './src/projects/';
 //获取环境变量
@@ -47,9 +48,32 @@ const htmlPlugins = (entries) => {
   return htmlPlugins;
 };
 
+const cssRules = () => {
+  const isCustomVar = fs.existsSync(path.join(__dirname, `../../src/projects/${projectName}/var.scss`));
+  let prependData = ` @import "@/styles/mixins/prepend.scss"; `;
+  if (isCustomVar) {
+    prependData += ` @import "@/projects/${projectName}/var.scss; "`;
+  }
+  return {
+    test: /\.(css|scss|sass)$/,
+    use: [
+      isBuild ? MiniCssExtractPlugin.loader : {loader: 'style-loader'},
+      {loader: 'css-loader'},
+      {
+        loader: 'sass-loader',
+        options: {
+          prependData,
+          implementation: require('sass')
+        }
+      }
+    ]
+  };
+};
+
 module.exports = () => {
   const entry = entries();
   const htmlPluginList = htmlPlugins(entry);
+  const plugins = [...htmlPluginList];
   const output = {
     path: isBuild ? config.assetsRoot : config.assetsRoot,
     filename: isBuild ? utils.assetsPath('js/[name].js') : '[name].js',
@@ -59,7 +83,11 @@ module.exports = () => {
   };
   if (isBuild) {
     output.chunkFilename = utils.assetsPath('js/[id].js');
+    plugins.push(
+        new MiniCssExtractPlugin({
+          filename: utils.assetsPath('css/[name].css')
+        })
+    );
   }
-  console.log({entry, htmlPluginList, output})
-  return {entry, htmlPluginList, output};
+  return {entry, plugins, output, rules: [cssRules()]};
 };
