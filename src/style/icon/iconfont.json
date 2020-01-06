@@ -1,0 +1,492 @@
+{
+  "id": "1417016",
+  "name": "bi",
+  "font_family": "bi",
+  "css_prefix_text": "bi-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "4251776",
+      "name": "折线图",
+      "font_class": "line-chart",
+      "unicode": "e655",
+      "unicode_decimal": 58965
+    },
+    {
+      "icon_id": "10922165",
+      "name": "colock",
+      "font_class": "clock",
+      "unicode": "e620",
+      "unicode_decimal": 58912
+    },
+    {
+      "icon_id": "10922166",
+      "name": "ring",
+      "font_class": "ring",
+      "unicode": "e621",
+      "unicode_decimal": 58913
+    },
+    {
+      "icon_id": "10922167",
+      "name": "list",
+      "font_class": "list",
+      "unicode": "e622",
+      "unicode_decimal": 58914
+    },
+    {
+      "icon_id": "10922172",
+      "name": "dash-board",
+      "font_class": "dash-board",
+      "unicode": "e623",
+      "unicode_decimal": 58915
+    },
+    {
+      "icon_id": "10922173",
+      "name": "charts",
+      "font_class": "chart",
+      "unicode": "e624",
+      "unicode_decimal": 58916
+    },
+    {
+      "icon_id": "10954907",
+      "name": "link",
+      "font_class": "link",
+      "unicode": "e625",
+      "unicode_decimal": 58917
+    },
+    {
+      "icon_id": "10954947",
+      "name": "bar-right",
+      "font_class": "bar-right",
+      "unicode": "e626",
+      "unicode_decimal": 58918
+    },
+    {
+      "icon_id": "10954948",
+      "name": "search",
+      "font_class": "search",
+      "unicode": "e627",
+      "unicode_decimal": 58919
+    },
+    {
+      "icon_id": "10954949",
+      "name": "bar-left",
+      "font_class": "bar-left",
+      "unicode": "e628",
+      "unicode_decimal": 58920
+    },
+    {
+      "icon_id": "10954950",
+      "name": "tyre",
+      "font_class": "tyre",
+      "unicode": "e629",
+      "unicode_decimal": 58921
+    },
+    {
+      "icon_id": "11114152",
+      "name": "lock",
+      "font_class": "lock",
+      "unicode": "e62a",
+      "unicode_decimal": 58922
+    },
+    {
+      "icon_id": "11114178",
+      "name": "user",
+      "font_class": "user",
+      "unicode": "e62b",
+      "unicode_decimal": 58923
+    },
+    {
+      "icon_id": "11114179",
+      "name": "key",
+      "font_class": "key",
+      "unicode": "e62c",
+      "unicode_decimal": 58924
+    },
+    {
+      "icon_id": "11114180",
+      "name": "uploading",
+      "font_class": "uploading",
+      "unicode": "e62d",
+      "unicode_decimal": 58925
+    },
+    {
+      "icon_id": "11207324",
+      "name": "疲劳驾驶",
+      "font_class": "eye",
+      "unicode": "e62e",
+      "unicode_decimal": 58926
+    },
+    {
+      "icon_id": "11207325",
+      "name": "危险驾驶",
+      "font_class": "danger",
+      "unicode": "e62f",
+      "unicode_decimal": 58927
+    },
+    {
+      "icon_id": "11207326",
+      "name": "吸烟",
+      "font_class": "no-smoking",
+      "unicode": "e630",
+      "unicode_decimal": 58928
+    },
+    {
+      "icon_id": "11207327",
+      "name": "换人",
+      "font_class": "change",
+      "unicode": "e631",
+      "unicode_decimal": 58929
+    },
+    {
+      "icon_id": "11207328",
+      "name": "打电话",
+      "font_class": "no-calling",
+      "unicode": "e632",
+      "unicode_decimal": 58930
+    },
+    {
+      "icon_id": "11207329",
+      "name": "遮挡",
+      "font_class": "cover",
+      "unicode": "e633",
+      "unicode_decimal": 58931
+    },
+    {
+      "icon_id": "11207330",
+      "name": "行人碰撞",
+      "font_class": "pedestrian",
+      "unicode": "e634",
+      "unicode_decimal": 58932
+    },
+    {
+      "icon_id": "11207331",
+      "name": "车道偏离",
+      "font_class": "road",
+      "unicode": "e635",
+      "unicode_decimal": 58933
+    },
+    {
+      "icon_id": "11207332",
+      "name": "异常怠速",
+      "font_class": "clock-o",
+      "unicode": "e636",
+      "unicode_decimal": 58934
+    },
+    {
+      "icon_id": "11207333",
+      "name": "停车开空调时长",
+      "font_class": "wind",
+      "unicode": "e637",
+      "unicode_decimal": 58935
+    },
+    {
+      "icon_id": "11207334",
+      "name": "车距过近、前车碰撞",
+      "font_class": "car",
+      "unicode": "e638",
+      "unicode_decimal": 58936
+    },
+    {
+      "icon_id": "11207335",
+      "name": "急刹车、急加速",
+      "font_class": "flash",
+      "unicode": "e639",
+      "unicode_decimal": 58937
+    },
+    {
+      "icon_id": "11207337",
+      "name": "大油门",
+      "font_class": "gasoline",
+      "unicode": "e63b",
+      "unicode_decimal": 58939
+    },
+    {
+      "icon_id": "11207338",
+      "name": "百公里能耗",
+      "font_class": "signal",
+      "unicode": "e63c",
+      "unicode_decimal": 58940
+    },
+    {
+      "icon_id": "11209766",
+      "name": "超速",
+      "font_class": "speed",
+      "unicode": "e63a",
+      "unicode_decimal": 58938
+    },
+    {
+      "icon_id": "11306374",
+      "name": "triangle-down-icon",
+      "font_class": "triangle-down-icon",
+      "unicode": "e709",
+      "unicode_decimal": 59145
+    },
+    {
+      "icon_id": "11312187",
+      "name": "warn-icon",
+      "font_class": "warn-icon",
+      "unicode": "e70a",
+      "unicode_decimal": 59146
+    },
+    {
+      "icon_id": "11312230",
+      "name": "popup-close-icon",
+      "font_class": "popup-close-icon",
+      "unicode": "e70b",
+      "unicode_decimal": 59147
+    },
+    {
+      "icon_id": "11333997",
+      "name": "message-info-icon",
+      "font_class": "message-info-icon",
+      "unicode": "e70f",
+      "unicode_decimal": 59151
+    },
+    {
+      "icon_id": "11333999",
+      "name": "message-wrong-icon",
+      "font_class": "message-wrong-icon",
+      "unicode": "e710",
+      "unicode_decimal": 59152
+    },
+    {
+      "icon_id": "11334000",
+      "name": "message-succeed-icon",
+      "font_class": "message-succeed-icon",
+      "unicode": "e711",
+      "unicode_decimal": 59153
+    },
+    {
+      "icon_id": "11334009",
+      "name": "message-warn-icon",
+      "font_class": "message-warn-icon",
+      "unicode": "e712",
+      "unicode_decimal": 59154
+    },
+    {
+      "icon_id": "11348777",
+      "name": "select-right-icon",
+      "font_class": "select-right-icon",
+      "unicode": "e714",
+      "unicode_decimal": 59156
+    },
+    {
+      "icon_id": "11348839",
+      "name": "input-close-icon",
+      "font_class": "-input-close-icon",
+      "unicode": "e716",
+      "unicode_decimal": 59158
+    },
+    {
+      "icon_id": "11528027",
+      "name": "pulldown-arrow-icon",
+      "font_class": "pulldown-arrow-icon",
+      "unicode": "e717",
+      "unicode_decimal": 59159
+    },
+    {
+      "icon_id": "11528507",
+      "name": "down-arrow-double-icon",
+      "font_class": "down-arrow-double-icon",
+      "unicode": "e719",
+      "unicode_decimal": 59161
+    },
+    {
+      "icon_id": "11528946",
+      "name": "nav-left-icon",
+      "font_class": "nav-left-icon",
+      "unicode": "e71c",
+      "unicode_decimal": 59164
+    },
+    {
+      "icon_id": "11528947",
+      "name": "nav-right-icon",
+      "font_class": "nav-right-icon",
+      "unicode": "e71d",
+      "unicode_decimal": 59165
+    },
+    {
+      "icon_id": "11552924",
+      "name": "left-nav-inside",
+      "font_class": "left-nav-inside",
+      "unicode": "e71e",
+      "unicode_decimal": 59166
+    },
+    {
+      "icon_id": "11595629",
+      "name": "question-icon",
+      "font_class": "question-icon",
+      "unicode": "e71f",
+      "unicode_decimal": 59167
+    },
+    {
+      "icon_id": "11668495",
+      "name": "date-icon",
+      "font_class": "date-icon",
+      "unicode": "e720",
+      "unicode_decimal": 59168
+    },
+    {
+      "icon_id": "11668496",
+      "name": "button-import-icon",
+      "font_class": "button-import-icon",
+      "unicode": "e721",
+      "unicode_decimal": 59169
+    },
+    {
+      "icon_id": "11668497",
+      "name": "button-reset-icon",
+      "font_class": "button-reset-icon",
+      "unicode": "e722",
+      "unicode_decimal": 59170
+    },
+    {
+      "icon_id": "11668498",
+      "name": "button-export-icon",
+      "font_class": "button-export-icon",
+      "unicode": "e723",
+      "unicode_decimal": 59171
+    },
+    {
+      "icon_id": "11668499",
+      "name": "button-setting-icon",
+      "font_class": "button-setting-icon",
+      "unicode": "e724",
+      "unicode_decimal": 59172
+    },
+    {
+      "icon_id": "11668500",
+      "name": "button-search-icon",
+      "font_class": "button-search-icon",
+      "unicode": "e725",
+      "unicode_decimal": 59173
+    },
+    {
+      "icon_id": "11671763",
+      "name": "button-add-icon",
+      "font_class": "button-add-icon",
+      "unicode": "e726",
+      "unicode_decimal": 59174
+    },
+    {
+      "icon_id": "11716929",
+      "name": "upload-close-icon",
+      "font_class": "upload-close-icon",
+      "unicode": "e727",
+      "unicode_decimal": 59175
+    },
+    {
+      "icon_id": "11716930",
+      "name": "upload-succeed-icon",
+      "font_class": "upload-succeed-icon",
+      "unicode": "e728",
+      "unicode_decimal": 59176
+    },
+    {
+      "icon_id": "11716948",
+      "name": "upload-file-icon",
+      "font_class": "upload-file-icon",
+      "unicode": "e729",
+      "unicode_decimal": 59177
+    },
+    {
+      "icon_id": "11745350",
+      "name": "sleep-icon",
+      "font_class": "sleep-icon",
+      "unicode": "e72a",
+      "unicode_decimal": 59178
+    },
+    {
+      "icon_id": "11745351",
+      "name": "waiting-package-icon",
+      "font_class": "waiting-package-icon",
+      "unicode": "e72b",
+      "unicode_decimal": 59179
+    },
+    {
+      "icon_id": "11905745",
+      "name": "button-delete1-icon",
+      "font_class": "button-delete-icon1",
+      "unicode": "e72d",
+      "unicode_decimal": 59181
+    },
+    {
+      "icon_id": "11965482",
+      "name": "map-compare-icon",
+      "font_class": "map-compare-icon",
+      "unicode": "e72c",
+      "unicode_decimal": 59180
+    },
+    {
+      "icon_id": "11965483",
+      "name": "map-report-icon",
+      "font_class": "map-report-icon",
+      "unicode": "e72e",
+      "unicode_decimal": 59182
+    },
+    {
+      "icon_id": "12006676",
+      "name": "address-icon",
+      "font_class": "address-icon",
+      "unicode": "e72f",
+      "unicode_decimal": 59183
+    },
+    {
+      "icon_id": "12153608",
+      "name": "login-passwd-icon",
+      "font_class": "login-passwd-icon",
+      "unicode": "e730",
+      "unicode_decimal": 59184
+    },
+    {
+      "icon_id": "12153609",
+      "name": "login-access-icon",
+      "font_class": "login-access-icon",
+      "unicode": "e731",
+      "unicode_decimal": 59185
+    },
+    {
+      "icon_id": "12153610",
+      "name": "login-user-icon",
+      "font_class": "login-user-icon",
+      "unicode": "e732",
+      "unicode_decimal": 59186
+    },
+    {
+      "icon_id": "12355025",
+      "name": "record-icon",
+      "font_class": "record-icon",
+      "unicode": "e733",
+      "unicode_decimal": 59187
+    },
+    {
+      "icon_id": "12481162",
+      "name": "add-item-icon",
+      "font_class": "add-item-icon",
+      "unicode": "e734",
+      "unicode_decimal": 59188
+    },
+    {
+      "icon_id": "12523070",
+      "name": "sharp-turns-icon",
+      "font_class": "sharp-turns-icon",
+      "unicode": "e735",
+      "unicode_decimal": 59189
+    },
+    {
+      "icon_id": "12523071",
+      "name": "driving-habits-icon",
+      "font_class": "driving-habits-icon",
+      "unicode": "e736",
+      "unicode_decimal": 59190
+    },
+    {
+      "icon_id": "12523072",
+      "name": "high-speed-icon",
+      "font_class": "high-speed-icon",
+      "unicode": "e737",
+      "unicode_decimal": 59191
+    }
+  ]
+}

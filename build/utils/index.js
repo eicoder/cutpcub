@@ -1,4 +1,13 @@
 const packageConfig = require('../../package.json');
+const config = require('../config');
+const path = require('path');
+
+exports.assetsPath = function (_path) {
+  const assetsSubDirectory = process.env.NODE_ENV === 'production'
+      ? config.build.assetsSubDirectory
+      : config.dev.assetsSubDirectory;
+  return path.posix.join(assetsSubDirectory, _path)
+}
 
 /**
  * webpack-dev-server 错误提示
