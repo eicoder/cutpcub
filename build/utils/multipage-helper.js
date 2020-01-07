@@ -6,6 +6,7 @@ const config = require('../config');
 const utils = require('./index');
 const fs = require("fs");
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const PurifyCssPlugin = require('purifycss-webpack');
 
 const projectPath = './src/projects/';
 //获取环境变量
@@ -40,8 +41,8 @@ const htmlPlugins = (entries) => {
   Object.keys(entries).forEach((key) => {
     htmlPlugins.push(new HtmlWebpackPlugin({
       template: entries[key].replace('.js', '.html'),
-      filename: isBuild ? path.posix.join(config.assetsRoot, 'pages', `${key}.html`) : `${key}`,
-      chunks: [key],
+      filename: isBuild ? path.posix.join(config.assetsRoot, `${key}.html`) : `${key}`,
+      chunks: ['icon', 'common', key],
       minify: false
     }));
   });
@@ -57,15 +58,21 @@ const cssRules = () => {
   return {
     test: /\.(css|scss|sass)$/,
     use: [
-      isBuild ? MiniCssExtractPlugin.loader : {loader: 'style-loader'},
-      {loader: 'css-loader'},
+      isBuild ? {
+        loader: MiniCssExtractPlugin.loader,
+        options: {
+          publicPath: '../../',
+        }
+      } : {loader: 'style-loader'},
+      { loader: 'css-loader' },
       {
         loader: 'sass-loader',
         options: {
           prependData,
           implementation: require('sass')
         }
-      }
+      },
+      { loader: 'postcss-loader' }
     ]
   };
 };
@@ -88,6 +95,13 @@ module.exports = () => {
           filename: utils.assetsPath('css/[name].css')
         })
     );
+    if (config.build.purifyCss) {
+      plugins.push(
+          new PurifyCssPlugin({
+            paths: glob.sync(path.join(__dirname, `../../src/projects/${projectName}/**/index.html`))
+          })
+      )
+    }
   }
   return {entry, plugins, output, rules: [cssRules()]};
 };

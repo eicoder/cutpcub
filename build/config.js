@@ -17,7 +17,8 @@ module.exports = {
   },
   build: {
     assetsSubDirectory: 'static',
-    assetsPublicPath: '/',
+    assetsPublicPath: './',
+    purifyCss: true, // 是否开启去除无用的css （动态引入的css会被消除）
     env: {
       NODE_ENV: '"production"'
     }
