@@ -65,30 +65,5 @@ module.exports = {
         ...rules
     ]
   },
-  optimization: {
-    minimize: false,
-    splitChunks: {
-      cacheGroups: {
-        // icon: {
-        //   name: 'icon',
-        //   test: (m, c, entry) => {
-        //     m.constructor.name === 'CssModule' && console.log(m.context, m.context.includes('icon'));
-        //     return m.constructor.name === 'CssModule' && m.context.includes('icon')
-        //   },
-        //   chunks: 'all',
-        //   enforce: true,
-        // },
-        commons: {
-          name: 'commons' ,  // 提取出来的文件命名
-          chunks: 'all',   // initial表示提取入口文件的公共css及
-          // chunks: 'all' // 提取所有文件的公共部分
-          // test： '/\.css$/'  // 只提取公共css ，命名可改styles
-          minChunks:2, // 表示提取公共部分最少的文件数
-          minSize: 0  // 表示提取公共部分最小的大小
-          // 如果发现页面中未引用公共文件，加上enforce: true
-        }
-      }
-    }
-  },
   plugins: [...plugins]
 };
