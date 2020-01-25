@@ -28,8 +28,8 @@ if (!projectName) {
 
 const entries = () => {
   const entries = {};
-  glob.sync(`${projectPath}${projectName}/${isBuild || !pageName ? '**' : pageName}/index.js`).forEach((entryPath) => {
-    const regExp = new RegExp(`/${projectName}/(\\w+)/`);
+  glob.sync(`${projectPath}${projectName}/pages/${isBuild || !pageName ? '**' : pageName}/index.js`).forEach((entryPath) => {
+    const regExp = new RegExp(`/${projectName}/pages/(\\w+)/`);
     const name = entryPath.match(regExp)[1];
     entries[name] = entryPath;
   });
@@ -53,7 +53,7 @@ const cssRules = () => {
   const isCustomVar = fs.existsSync(path.join(__dirname, `../../src/projects/${projectName}/var.scss`));
   let prependData = ` @import "@/styles/mixins/prepend.scss"; `;
   if (isCustomVar) {
-    prependData += ` @import "@/projects/${projectName}/var.scss; "`;
+    prependData += `@import "@/projects/${projectName}/var.scss"; `;
   }
   return {
     test: /\.(css|scss|sass)$/,
@@ -98,7 +98,7 @@ module.exports = () => {
     if (config.build.purifyCss) {
       plugins.push(
           new PurifyCssPlugin({
-            paths: glob.sync(path.join(__dirname, `../../src/projects/${projectName}/**/index.html`))
+            paths: glob.sync(path.join(__dirname, `../../src/projects/${projectName}/pages/**/index.html`))
           })
       )
     }
