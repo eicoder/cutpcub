@@ -42,7 +42,7 @@ const htmlPlugins = (entries) => {
     htmlPlugins.push(new HtmlWebpackPlugin({
       template: entries[key].replace('.js', '.html'),
       filename: isBuild ? path.posix.join(config.assetsRoot, `${key}.html`) : `${key}`,
-      chunks: ['icon', 'common', key],
+      chunks: [key],
       minify: false
     }));
   });

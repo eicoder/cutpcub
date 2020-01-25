@@ -9,18 +9,6 @@ function resolve (dir) {
   return path.join(__dirname, '..', dir);
 }
 
-let i = 1;
-
-function recursiveIssuer(m) {
-  if (m.issuer) {
-    return recursiveIssuer(m.issuer);
-  } else if (m.name) {
-    return m.name;
-  } else {
-    return false;
-  }
-}
-
 module.exports = {
   context: path.resolve(__dirname, '../'),
   entry,
