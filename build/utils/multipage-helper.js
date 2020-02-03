@@ -7,6 +7,7 @@ const utils = require('./index');
 const fs = require("fs");
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const PurifyCssPlugin = require('purifycss-webpack');
+const SpritesmithPlugin = require('webpack-spritesmith');
 
 const projectPath = './src/projects/';
 //获取环境变量
@@ -49,6 +50,35 @@ const htmlPlugins = (entries) => {
   return htmlPlugins;
 };
 
+const spritesPlugins = () => {
+  return new SpritesmithPlugin({
+    src: {
+      cwd: path.resolve(__dirname, `../../src/projects/${projectName}/sprites/`), // 图标根路径
+      glob: '**/*.png' // 匹配任意 png 图标
+    },
+    target: {
+      image: path.resolve(__dirname, `../../src/assets/${projectName}/images/sprites-generated.png`), // 生成雪碧图目标路径与名称
+      // 设置生成CSS背景及其定位的文件或方式
+      // css: [
+      //   [path.resolve(__dirname, '../src/assets/css/sprites-generated.css'), {
+      //     format: 'function_based_template'
+      //   }]
+      // ]
+      css: path.resolve(__dirname, `../../src/projects/${projectName}/sprite.css`)
+    },
+    // 样式文件中,调用雪碧图的写法????
+    apiOptions: {
+      cssImageRef: `../../assets/${projectName}/images/sprites-generated.png`
+    },
+    // 雪碧图生成算法
+    spritesmithOptions: {
+      algorithm: 'top-down', // 从上到下生成方向.
+      padding: 2// 每个小图标之间的间隙
+    }
+  })
+
+};
+
 const cssRules = () => {
   const isCustomVar = fs.existsSync(path.join(__dirname, `../../src/projects/${projectName}/var.scss`));
   let prependData = ` @import "@/styles/mixins/prepend.scss"; `;
@@ -80,7 +110,8 @@ const cssRules = () => {
 module.exports = () => {
   const entry = entries();
   const htmlPluginList = htmlPlugins(entry);
-  const plugins = [...htmlPluginList];
+  const spritesList = spritesPlugins();
+  const plugins = [...htmlPluginList, spritesList];
   const output = {
     path: isBuild ? config.assetsRoot : config.assetsRoot,
     filename: isBuild ? utils.assetsPath('js/[name].js') : '[name].js',

@@ -31,6 +31,7 @@ module.exports = {
         {
           test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
           loader: 'file-loader',
+          exclude: [resolve('src/projects/**/*.png')],
           options: {
             name: utils.assetsPath('img/[name].[ext]')
           }
