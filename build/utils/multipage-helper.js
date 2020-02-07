@@ -64,11 +64,11 @@ const spritesPlugins = () => {
       //     format: 'function_based_template'
       //   }]
       // ]
-      css: path.resolve(__dirname, `../../src/projects/${projectName}/sprite.css`)
+      css: path.resolve(__dirname, `../../src/projects/${projectName}/sprites/sprite.css`)
     },
     // 样式文件中,调用雪碧图的写法????
     apiOptions: {
-      cssImageRef: `../../assets/${projectName}/images/sprites-generated.png`
+      cssImageRef: `../../../assets/${projectName}/images/sprites-generated.png`
     },
     // 雪碧图生成算法
     spritesmithOptions: {
@@ -84,6 +84,9 @@ const cssRules = () => {
   let prependData = ` @import "@/styles/mixins/prepend.scss"; `;
   if (isCustomVar) {
     prependData += `@import "@/projects/${projectName}/var.scss"; `;
+  }
+  if (fs.existsSync(path.join(__dirname, `../../src/projects/${projectName}/sprites`))) {
+    prependData += `@import "~@/projects/${projectName}/sprites/sprite.css"; `;
   }
   return {
     test: /\.(css|scss|sass)$/,
