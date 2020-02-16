@@ -1,5 +1,3 @@
-const glob = require('glob');
+const format = require('util').format
 
-glob.sync('./src/projects/bi/pages').forEach((entryPath) => {
-  console.log(entryPath);
-});
+console.log(format);

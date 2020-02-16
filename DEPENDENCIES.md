@@ -13,3 +13,12 @@
 ### [glob](https://github.com/isaacs/node-glob)
 使用shell使用的模式匹配文件
 ### [html-webpack-plugin](https://github.com/jantimon/html-webpack-plugin)
+
+### [commander](https://github.com/tj/commander.js)
+### user-home 
+用于获取用户的根目录
+### inquirer
+用于命令行与开发者交互
+### [metalsmith](https://github.com/segmentio/metalsmith)
+一个非常简单，可插拔的静态站点生成器
+
