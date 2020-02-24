@@ -54,10 +54,10 @@ function init() {
   if (offline) {
     const templatePath = getTemplatePath(tmp);
     if (exists(templatePath)) {
-      generate(name, templatePath, to, err => {
+      generate('init', [name, templatePath, to, err => {
         if (err) logger.fatal(err)
-        logger.success('Generated "%s".', name)
-      })
+        logger.success('工程创建完成 "%s".', name)
+      }])
     } else {
       logger.fatal('Local template "%s" not found.', template)
     }
@@ -89,9 +89,9 @@ function downloadAndGenerate (template) {
   download(template, tmp, { clone }, err => {
     spinner.stop();
     if (err) logger.fatal('Failed to download repo ' + template + ': ' + err.message.trim())
-    generate(name, tmp, to, err => {
+    generate('init', [name, tmp, to, err => {
       if (err) logger.fatal(err);
-      logger.success('Generated "%s".', name);
-    });
+      logger.success('工程创建完成 "%s".', name);
+    }]);
   })
 }
