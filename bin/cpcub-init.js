@@ -3,6 +3,7 @@
 const program = require('commander');
 const inquirer = require('inquirer');
 const ora = require('ora');
+const chalk = require('chalk');
 const rm = require('rimraf').sync;
 const download = require('download-git-repo');
 const path = require('path');
@@ -13,13 +14,28 @@ const logger = require('./lib/logger');
 const generate = require('./lib/generate');
 
 program
-    .usage('[工程名称]')
+    .usage('<工程名称>')
     .option('-c, --clone', 'use git clone')
     .option('-g, --git <git>', '自定义模版位置')
-    .option('--offline', '使用缓存，不重新加载')
+    .option('--offline', '使用缓存，不重新加载').on('--help', () => {
+        console.log('  Examples:');
+        console.log();
+        console.log(chalk.gray('    # 创建官方模板的工程'));
+        console.log('    $ cpcub init cutpcub');
+        console.log();
+        console.log(chalk.gray('    # 创建自定义github模板工程'));
+        console.log('    $ cpcub init cutpcub -g username/repo');
+        console.log();
+    })
     .parse(process.argv);
-
 const rawName = program.args[0];
+
+if (!rawName) {
+  console.log(chalk.red('缺少参数 <工程名>'));
+  return program.help();
+}
+
+
 const to = path.resolve(rawName || '.');
 const inPlace = !rawName || rawName === '.';
 const name = inPlace ? path.relative('../', process.cwd()) : rawName;
