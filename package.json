@@ -4,9 +4,9 @@
   "description": "切图",
   "main": "index.js",
   "bin": {
-    "cpcub": "bin/cpcub.js",
-    "cpcub-init": "bin/cpcub-init.js",
-    "cpcub-new": "bin/cpcub-new.js"
+    "cutpcub": "bin/cutpcub.js",
+    "cutpcub-init": "bin/cutpcub-init.js",
+    "cutpcub-new": "bin/cutpcub-new.js"
   },
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
