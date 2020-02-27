@@ -1,0 +1,35 @@
+{
+  "name": "cutpcub",
+  "version": "1.0.0",
+  "description": "切图",
+  "main": "index.js",
+  "bin": {
+    "cutpcub": "bin/cutpcub.js",
+    "cutpcub-init": "bin/cutpcub-init.js",
+    "cutpcub-new": "bin/cutpcub-new.js"
+  },
+  "scripts": {
+    "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
+    "build": "node build/build.js"
+  },
+  "keywords": [
+    "切图",
+    "工程化"
+  ],
+  "author": "Ei",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "chalk": "^3.0.0",
+    "commander": "^4.1.1",
+    "consolidate": "^0.15.1",
+    "download-git-repo": "^3.0.2",
+    "handlebars": "^4.7.3",
+    "inquirer": "^7.0.4",
+    "metalsmith": "^2.3.0",
+    "minimatch": "^3.0.4",
+    "ora": "^4.0.3",
+    "rimraf": "^3.0.0",
+    "user-home": "^2.0.0"
+  }
+}
