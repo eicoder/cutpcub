@@ -2,15 +2,12 @@
   "name": "cutpcub",
   "version": "1.0.0",
   "description": "切图",
-  "main": "index.js",
+  "private": true,
+  "preferGlobal": true,
   "bin": {
     "cutpcub": "bin/cutpcub.js",
     "cutpcub-init": "bin/cutpcub-init.js",
     "cutpcub-new": "bin/cutpcub-new.js"
-  },
-  "scripts": {
-    "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
-    "build": "node build/build.js"
   },
   "keywords": [
     "切图",
