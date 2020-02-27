@@ -2,7 +2,6 @@
   "name": "cutpcub",
   "version": "1.0.0",
   "description": "切图",
-  "private": true,
   "preferGlobal": true,
   "bin": {
     "cutpcub": "bin/cutpcub.js",
