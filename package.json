@@ -14,8 +14,8 @@
   ],
   "author": "Ei",
   "license": "ISC",
-  "dependencies": {},
-  "devDependencies": {
+  "devDependencies": {},
+  "dependencies": {
     "chalk": "^3.0.0",
     "commander": "^4.1.1",
     "consolidate": "^0.15.1",
